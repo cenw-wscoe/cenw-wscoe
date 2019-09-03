@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <title>Best practices - Web Standards Centre of Expertise (WS CoE)</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description"
+        content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
+    <!-- Meta data-->
+    <!-- Load closure template scripts -->
+    <script src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_31/cdts/compiled/soyutils.js">
+    </script>
+    <script src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_31/cdts/compiled/wet-en.js"></script>
+    <!-- Write closure template -->
+    <script>
+        document.write(wet.builder.refTop({
+            "isApplication": true
+        }));
+    </script>
+</head>
+
+<body vocab="https://schema.org/" typeof="WebPage">
+    <div id="def-top">
+    </div>
+    <!-- Write closure template -->
+    <script>
+        var defTop = document.getElementById("def-top");
+        defTop.outerHTML = wet.builder.appTop({
+            "appName": [{
+                "text": "Web Standards Centre of Expertise (WS CoE)",
+                "href": "#"
+            }],
+            "lngLinks": [{
+                "lang": "fr",
+                "href": "#",
+                "text": "Français"
+            }],
+            "breadcrumbs": [{
+                "title" : "Home",
+                "href" : "index.html"
+            }]
+        });
+    </script>
+    <main role="main" property="mainContentOfPage" class="container">
+
+
+        <h1>Best practices</h1>
+
+        <section>
+            <h2>Hash tag link</h2>
+            <div class="row">
+                <section class="col-md-6">
+                    <h3>Normal link</h3>
+                    <p>Have you seen what people are saying about <a href="https://twitter.com/search?q=%23a11y">#a11y</a> on Twitter</p>
+            <pre><code>&lt;p&gt;Have you seen what people are saying about &lt;a href="https://twitter.com/search?q=%23a11y"&gt;#a11y&lt;/a&gt; on Twitter&lt;/p&gt;</code></pre>
+                </section>
+                <section class="col-md-6">
+                    <h3>Hidden text with <code>aria-hidden</code></h3>
+                    <p>Have you seen what people are saying about <a href="https://twitter.com/search?q=%23a11y"><span class="wb-inv">hash tag a 11 y</span><span aria-hidden="true">#a11y</span></a> on Twitter</p>
+                    <pre><code>&lt;p&gt;Have you seen what people are saying about &lt;a href="https://twitter.com/search?q=%23a11y"&gt;&lt;span class="wb-inv"&gt;hash tag a 11 y&lt;/span&gt;&lt;span aria-hidden="true"&gt;#a11y&lt;/span&gt;&lt;/a&gt; on Twitter&lt;/p&gt;</code></pre>
+                </section>
+                <section class="col-md-6">
+                    <h3>Hidden text with <code>role="presentation"</code></h3>
+                    <p>Have you seen what people are saying about <a href="https://twitter.com/search?q=%23a11y"><span class="wb-inv">hash tag a 11 y</span><span role="presentation">#a11y</span></a> on Twitter</p>
+                    <pre><code>&lt;p&gt;Have you seen what people are saying about &lt;a href="https://twitter.com/search?q=%23a11y"&gt;&lt;span class="wb-inv"&gt;hash tag a 11 y&lt;/span&gt;&lt;span role="presentation"&gt;#a11y&lt;/span&gt;&lt;/a&gt; on Twitter&lt;/p&gt;</code></pre>
+                </section>
+                <section class="col-md-6">
+                    <h3>Using <code>aria-label</code></h3>
+                    <p>Have you seen what people are saying about <a href="https://twitter.com/search?q=%23a11y"><span aria-label="hash tag a 11 y">#a11y</span></a> on Twitter</p>
+                    <pre><code>&lt;p&gt;Have you seen what people are saying about &lt;a href="https://twitter.com/search?q=%23a11y"&gt;&lt;span aria-label="hash tag a 11 y"&gt;#a11y&lt;/span&gt;&lt;/a&gt; on Twitter&lt;/p&gt;</code></pre>
+                </section>
+            </div>
+        </section>
+
+
+
+        <div id="def-preFooter">
+        </div>
+        <!-- Write closure template -->
+        <script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                "dateModified": "2019-03-08"
+            });
+        </script>
+    </main>
+    
+    <div id="def-footer">
+    </div>
+    <!-- Write closure template -->
+    <script>
+        var defFooter = document.getElementById("def-footer");
+        defFooter.outerHTML = wet.builder.appFooter({
+            "showFeatures": false
+        });
+    </script>
+    <!-- Write closure template -->
+    <script>
+        document.write(wet.builder.refFooter({}));
+    </script>
+</body>
+
+</html>
