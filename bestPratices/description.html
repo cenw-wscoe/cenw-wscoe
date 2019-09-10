@@ -7,12 +7,12 @@
 <head>
     <meta charset="utf-8">
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-    <title>Common accessibility issues - Web Standards Centre of Expertise (WS CoE)</title>
+    <title>Common accessibility issues&nbsp;&ndash; Web Standards Centre of Expertise (WS&nbsp;CoE)</title>
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
     <meta name="description"
         content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
-    <!-- Meta data-->
+    <!-- Meta data -->
     <!-- Load closure template scripts -->
     <script src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_31/cdts/compiled/soyutils.js">
     </script>
@@ -52,90 +52,90 @@
 
         <h1>Common accessibility issues</h1>
 
-        <p>Common accessibility problems are listed below according to their WCAG 2.1 Level AA success criterion.</p>
+        <p>Common accessibility problems are listed below according to their WCAG&nbsp;2.1 Level&nbsp;AA success criterion.</p>
 <div class="wb-eqht row">
         <section class="col-md-6">
             <h2 class="h4"><a href="https://www.w3.org/TR/WCAG21/#parsing">Success Criterion 4.1.1 Parsing</a></h2>
             <p>We use W3C <a href="https://validator.w3.org/#validate_by_input">Markup Validation Service</a> to
-                validate the HTML. Please use proper HTML to markup the content of the applications. Validate HTML after
+                validate the HTML. Please use proper HTML to mark up the content of the applications. Validate HTML after
                 JavaScript injection.</p>
         </section>
         <section class="col-md-6">
             <h2 class="h4"><a href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">Success Criterion 3.3.2 Labels or
                     Instructions</a></h2>
             <p>Using the <a href="https://addons.mozilla.org/en-US/firefox/addon/wave-accessibility-tool/">Wave Firefox
-                    extension</a> to check for accessibility in forms we can ensure that the form elements (fields) have
-                label associated with them.</p>
+                    extension</a> to check for accessibility in forms to ensure that the form elements (fields) have
+                labels associated with them.</p>
         </section>
         <section class="col-md-6">
             <h2 class="h4"><a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">Success Criterion 1.4.3 Contrast (Minimum)</a>
                 and <a href="https://www.w3.org/TR/WCAG21/#non-text-contrast">Success Criterion 1.4.11 Non-text
                     Contrast</a></h2>
-            <p>Text and non-text (button, icons that have function) need to pass a contrast ratio of 4.5:1. This can be
+            <p>Text and non-text (buttons, icons that have function) need to pass a contrast ratio of 4.5:1. This can be
                 done using the <a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast
                     Analyser</a> to test if the colours have a good ratio for Level AA. Normally we try to make it level
-                AAA if you possible. It's an easy solution to make a site even more accessible</p>
+                AAA if possible. It's an easy solution to make a site even more accessible.</p>
         </section>
         <section class="col-md-6">
             <h2 class="h4"><a href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">Success Criterion 1.3.2 Meaningful
                     Sequence</a></h2>
-            <p>Content on pages are using table elements instead of styles (CSS) to layout the content. This becomes an
+            <p>Content on pages are using table elements instead of styles (CSS) to lay out the content. This becomes an
                 issue of verbosity when a screen reader encounters this content. This also fails <a
                     href="https://www.w3.org/TR/WCAG21/#reflow">Success Criterion 1.4.10 Reflow</a> because the table
-                does not reflow when in mobile or at a smaller screen.</p>
+                does not reflow when in mobile or a smaller screen.</p>
         </section>
         <section class="col-md-6">
             <h2 class="h4"><a href="https://www.w3.org/TR/WCAG21/#headings-and-labels">Success Criterion 2.4.6 Headings and
                     Labels</a></h2>
-            <p>Text that is found on the web should be markup as heading using proper HTML elements for heading (h1, h2,
-                h3, etc...) depending on the hierarchy of the page. Proper descriptive headings.</p>
+            <p>Text that is found on the web should be marked up as headings using proper HTML elements for headings (h1, h2,
+                h3, etc...), depending on the hierarchy of the page. Proper descriptive headings.</p>
         </section>
         <section class="col-md-6">
             <h2 class="h4"><a href="https://www.w3.org/TR/WCAG21/#keyboard">Success Criterion 2.1.1 Keyboard</a></h2>
             <p>All clickable elements should also be accessible via keyboard.</p>
             <p>Instances where the use of the title attribute to relay information in a hover state is not visible to
                 users who use keyboard only and many screen readers do not read the value of the title attribute, must
-                also not to forgot about mobile and touch screens users won't see this information either.</p>
+                also not to forget that mobile and touch screen users won't see this information either.</p>
         </section>
         <section class="col-md-6">
-            <h2 class="h4"><a href="https://www.w3.org/TR/WCAG21/#non-text-content">Success Criterion 1.1.1 Non-text Content</a>
+            <h2 class="h4"><a href="https://www.w3.org/TR/WCAG21/#non-text-content">Success Criterion 1.1.1 Non&#8209;text Content</a>
             </h2>
             <p>Missing alt attribute on images. Example is the "multilingual18.gif" in copy form, add the text from
                 title attribute and remove title attribute. Use proper alt text to describe function of linked image.
             </p>
             <p>Images not using proper alt text in the alt attribute to describe the function of the image and not a
-                description of what the image is. Folder image on copy page is using a alt text that has the text
-                "folder", which does not need to be there for decorative images. Please use an empty alt attribute
+                description of what the image is. Folder image on copy page is using an alt text that has the text
+                "folder" which does not need to be there for decorative images. Please use an empty alt attribute
                 <code>alt=""</code> for all decorative images.</p>
         </section>
         <section class="col-md-6">
             <h2 class="h4"><a href="https://www.w3.org/TR/WCAG21/#name-role-value">Success Criterion 4.1.2 Name, Role, Value</a>
             </h2>
-            <p>Using a details (expand / collapse) function in the table which isn't marked up properly. When a screen
+            <p>Using a details (expand/&#8203;collapse) function in the table which isn't marked up properly. When a screen
                 reader user encounters the function, they are unaware that there is more information related to it.
                 Please refer to <a
                     href="https://www.w3.org/WAI/GL/wiki/Using_the_WAI-ARIA_aria-expanded_state_to_mark_expandable_and_collapsible_regions">Using
-                    the WAI-ARIA aria-expanded state to mark expandable and collapsible regions</a> on the W3C website
-                on how to markup this function properly.</p>
+                    the WAI&#8209;ARIA aria-expanded state to mark expandable and collapsible regions</a> on the W3C website
+                on how to mark up this function properly.</p>
         
         
-            <p>Using a tab layout without the proper Roles to define it to a AT device that it's a tab layout. Here's an
+            <p>Using a tab layout without the proper roles to define it to an AT device that it's a tab layout. Here's an
                 article on <a
                     href="https://www.deque.com/blog/a11y-support-series-part-1-aria-tab-panel-accessibility/">how to
-                    build an accessible tap panel</a>.</p>
+                    build an accessible tab panel</a>.</p>
         </section>
         <section class="col-md-6">
             <h2 class="h4"><a href="https://www.w3.org/TR/WCAG21/#timing-adjustable">Success Criterion 2.2.1 Timing Adjustable</a>
             </h2>
-            <p>If automatic timeout is not set to over 20 hours, you have to give them a way to extend the time.</p>
+            <p>If automatic timeout is not set to over 20&nbsp;hours, you have to give them a way to extend the time.</p>
         
         </section>
         <section class="col-md-6">
             <h2 class="h4"><a href="https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html">Success Criterion
                     2.4.4 Link Purpose (In Context)</a></h2>
-            <p>Ensure that all links work and none are broken links.</p>
+            <p>Ensure that all links work and that there are no broken links.</p>
         </section>
-    </div>        
+    </div>
 
         <div id="def-preFooter">
         </div>
