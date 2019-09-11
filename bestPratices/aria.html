@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <title>ARIA-Describedby and Labelledby Test Page - Web Standards Centre of Expertise (WS CoE)</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description"
+        content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
+    <!-- Meta data-->
+    <!-- Load closure template scripts -->
+    <script src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_31/cdts/compiled/soyutils.js">
+    </script>
+    <script src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_31/cdts/compiled/wet-en.js"></script>
+    <!-- Write closure template -->
+    <script>
+        document.write(wet.builder.refTop({
+            "isApplication": true
+        }));
+    </script>
+</head>
+
+<body vocab="https://schema.org/" typeof="WebPage">
+    <div id="def-top">
+    </div>
+    <!-- Write closure template -->
+    <script>
+        var defTop = document.getElementById("def-top");
+        defTop.outerHTML = wet.builder.appTop({
+            "appName": [{
+                "text": "Web Standards Centre of Expertise (WS CoE)",
+                "href": "#"
+            }],
+            "lngLinks": [{
+                "lang": "fr",
+                "href": "#",
+                "text": "Français"
+            }],
+            "breadcrumbs": [{
+                "title" : "Home",
+                "href" : "../en/index.html"
+            } , {
+                "title" : "Best pratices",
+                "href" : "./index.html"
+            }]
+        });
+    </script>
+    <main role="main" property="mainContentOfPage" class="container">
+
+
+        <h1>ARIA-Describedby and Labelledby Test Page</h1>
+        <!-- <p>Please help discuss with us your thoughts on this on issue - <a href="https://github.com/cenw-wscoe/cenw-wscoe/issues/">ARIA-Describedby and Labelledby Test Page</a></p> -->
+
+		<form>
+			<div class="formHolder">
+				<label for="initTxt">Random form field</label><br>
+				<input id="initTxt" type="text" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+			</div>
+			<p id="extraInfo">This is some kind of extra text that provides information that pertains to the following fields way down below.</p>
+			<fieldset aria-labelledby="extraInfo">
+				<legend>fieldset with labelledby</legend>
+				<label><input type="checkbox"> Checkbox 1</label>
+			</fieldset>
+			<details>
+			<summary>Screen Readers Results</summary>
+			<dl>
+				<dt>JAWS</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>This is some kind of extra text.... Checkbox 1 not checked. To check press space bar.</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Fieldset with labelledy Checkbox 1 checkbox not checked.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>This is some kind of extra text.... Checkbox 1 not checked. To check press space bar.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>NVDA</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>This is some kind of extra text...grouping. Checkbox 1 checkbox not checked.</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Checkbox 1 checkbox not checked.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>This is some kind of extra text...grouping. Checkbox 1 checkbox not checked.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>iOS Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Safari, Firefox, and Chrome</dt>
+					<dd><q>Only reads label.</q></dd>
+					<dt>Opera Mini</dt>
+					<dd>Abosultely nothing</dd>
+				</dl>
+				</dd>
+				<dt>OS X Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><q>Checkbox 1. Checkbox 1.  This is some kind of extra text....Unchecked checkbox.</q></dd>
+					<dt>Chrome</dt>
+					<dd><q>Checkbox 1.  This is some kind of extra text...Unchecked checkbox</q></dd>
+					<dt>Safari</dt>
+					<dd><q>Checkbox 1. Unchecked checkbox</q></dd>
+					<dt>Opera</dt>
+					<dd><q>Checkbox 1. This is some kind of extra text..... Unchecked checkbox.</q></dd>
+				</dl>
+				</dd>
+			</dl>
+		</details>
+
+			<fieldset aria-describedby="extraInfo">
+				<legend>fieldset with describedby</legend>
+				<label><input type="checkbox"> Checkbox 2</label>
+			</fieldset>
+			<details>
+			<summary>Screen Readers Results</summary>
+			<dl>
+				<dt>JAWS</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>Fieldset with describedy by.  This is some kind of extra text.... Checkbox 2 not checked. To check press space bar.</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Fieldset with describedy by. Checkbox 2 not checked.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>Fieldset with describedy by. Checkbox 2 not checked. To check press space bar.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>NVDA</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p>Clickable Checkbox 2 checkbox not checked.</p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Checkbox 2 checkbox not checked.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>Checkbox 2 checkbox not checked.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>iOS Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Safari, Firefox, and Chrome</dt>
+					<dd><q>Only reads label.</q></dd>
+					<dt>Opera Mini</dt>
+					<dd>Abosultely nothing</dd>
+				</dl>
+				</dd>
+				<dt>OS X Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><q>Checkbox 2. Checkbox 2 fieldset with describedby fieldset with describedby checkbox. Unchecked checkbox.</q></dd>
+					<dt>Chrome</dt>
+					<dd><q>Checkbox 2 fieldset with describedby. Unchecked checkbox.</q></dd>
+					<dt>Safari</dt>
+					<dd><q>Checkbox 2. Unchecked checkbox</q></dd>
+					<dt>Opera</dt>
+					<dd><q>Checkbox 2 fieldset with describedby. Unchecked checkbox.</q></dd>
+				</dl>
+				</dd>
+			</dl>
+		</details>
+		<fieldset>
+				<legend aria-labelledby="extraInfo">legend with labelledby</legend>
+				<label><input type="checkbox"> Checkbox 3</label>
+			</fieldset>
+			<details>
+			<summary>Screen Readers Results</summary>
+			<dl>
+				<dt>JAWS</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>Legend with labelledby Checkbox 3 not checked. To check press space bar.</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Legend with labelledby Checkbox 3 not checked.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>This is some kind of extra text.... Checkbox 3 not checked. To check press space bar.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>NVDA</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>Clickable Checkbox 3 checkbox not checked.</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Checkbox 3 checkbox not checked.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>Checkbox 3 checkbox not checked.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>iOS Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Safari, Firefox, and Chrome</dt>
+					<dd><q>Only reads label.</q></dd>
+					<dt>Opera Mini</dt>
+					<dd>Abosultely nothing</dd>
+				</dl>
+				</dd>
+				<dt>OS X Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><q>Checkbox 3. Checkbox 3. Legend with labelledby. This is some kind of extra text....Unchecked checkbox.</q></dd>
+					<dt>Chrome</dt>
+					<dd><q>Checkbox 3.  This is some kind of extra text...Unchecked checkbox</q></dd>
+					<dt>Safari</dt>
+					<dd><q>Checkbox 3. Unchecked checkbox</q></dd>
+					<dt>Opera</dt>
+					<dd><q>Checkbox 3. This is some kind of extra text..... Unchecked checkbox.</q></dd>
+				</dl>
+				</dd>
+			</dl>
+		</details>
+
+			<fieldset>
+				<legend aria-describedby="extraInfo">legend with describedby</legend>
+				<label><input type="checkbox"> Checkbox 4</label>
+			</fieldset>
+			<details>
+			<summary>Screen Readers Results</summary>
+			<dl>
+				<dt>JAWS</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>Legend with describedy by. Checkbox 4 checkbox not checked. To check press space bar.</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Legend with describedy by. Checkbox 4 checkbox not checked.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>Legend with describedy by. Checkbox 4 checkbox not checked. To check press space bar.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>NVDA</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p>Clickable Checkbox 4 checkbox not checked.</p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Checkbox 4 checkbox not checked.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>Checkbox 4 checkbox not checked.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>iOS Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Safari, Firefox, and Chrome</dt>
+					<dd><q>Only reads label.</q></dd>
+					<dt>Opera Mini</dt>
+					<dd>Abosultely nothing</dd>
+				</dl>
+				</dd>
+				<dt>OS X Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><q>Checkbox 4. Checkbox 4. Legend with describedby legned with describedby. Unchecked checkbox.</q></dd>
+					<dt>Chrome</dt>
+					<dd><q>Checkbox 4.  Legend with describedby.  Unchecked checkbox</q></dd>
+					<dt>Safari</dt>
+					<dd><q>Checkbox 4. Unchecked checkbox</q></dd>
+					<dt>Opera</dt>
+					<dd><q>Checkbox 4. Legend with describedby. Unchecked checkbox.</q></dd>
+				</dl>
+				</dd>
+			</dl>
+		</details>
+		<div class="fieldHolder">
+			<label for="txt1">Input with labelledby</label><br>
+			<input id="txt1" aria-labelledby="extraInfo" type="text">
+		</div>
+		<details>
+			<summary>Screen Readers Results</summary>
+			<dl>
+				<dt>JAWS</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>This is some kind of extra text... Edit. Type and text.</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>This is some kind of extra text... Edit. Type and text.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>This is some kind of extra text... Edit. Type and text.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>NVDA</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>This is some kind of extra text... Edit auto-complete. Blank</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>This is some kind of extra text... Edit blank.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>This is some kind of extra text... Edit blank.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>iOS Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Safari, Firefox, and Chrome</dt>
+					<dd><p><q>Input with labelledby. Text field. Double-tap to edit.</q></p></dd>
+					<dt>Opera Mini</dt>
+					<dd><p>Abosultely nothing</p></dd>
+				</dl>
+				</dd>
+				<dt>OS X Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>This is some kind of extra text.... text.</q></p></dd>
+					<dt>Chrome</dt>
+					<dd><p><q>This is some kind of extra text.... Edit text.</q></p></dd>
+					<dt>Safari</dt>
+					<dd><p><q>This is some kind of extra text.... Edit text.</q></p></dd>
+					<dt>Opera</dt>
+					<dd><p><q>This is some kind of extra text.... Edit text.</q></p></dd>
+				</dl>
+				</dd>
+			</dl>
+		</details>
+		<div class="fieldHolder">
+			<label for="txt2">Input with describedby</label><br>
+			<input id="txt2" aria-describedby="extraInfo" type="text">
+		</div>
+		<details>
+			<summary>Screen Readers Results</summary>
+			<dl>
+				<dt>JAWS</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>Input with describedby edit. This is some kind of extra text... Type and text.</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Input with describedby edit. This is some kind of extra text... Type and text.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>Input with describedby edit. Type and text.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>NVDA</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>Input with describedby edit auto-complete. This is some kind of extra text... Blank.</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Input with describedby edit. This is some kind of extra text... Blank.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>Input with describedby edit. This is some kind of extra text... Blank.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>iOS Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Safari, Firefox, and Chrome</dt>
+					<dd><q>Input with describedby.  Text field.</q> [2 second delay] <q>This is some kind of extra text...</q> Double-tap to Edit.</dd>
+					<dt>Opera Mini</dt>
+					<dd>Abosultely nothing</dd>
+				</dl>
+				</dd>
+				<dt>OS X Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>Input with describedby.  Text</q> [5 second delay] <q>You
+ are currently on a text field inside of a HTML docuent. To enter text 
+in this field, type. The help tag is: This is some kind of extra 
+text....</q></p></dd>
+					<dt>Chrome</dt>
+					<dd><p><q>Input with describedby.  Edit text.</q> [5 second delay] <q>You
+ are currently on a text field inside of a HTML docuent. To enter text 
+in this field, type. The help tag is: This is some kind of extra 
+text....</q></p></dd>
+					<dt>Safari</dt>
+					<dd><p><q>Input with describedby.  Edit text.</q> [5 second delay] <q>You
+ are currently on a text field inside of a HTML docuent. To enter text 
+in this field, type. The help tag is: This is some kind of extra 
+text....</q></p></dd>
+					<dt>Opera</dt>
+					<dd><p><q>Input with describedby.  Edit text.</q> [5 second delay] <q>You
+ are currently on a text field inside of a HTML docuent. To enter text 
+in this field, type. The help tag is: This is some kind of extra 
+text....</q></p></dd>
+				</dl>
+				</dd>
+			</dl>
+		</details>
+		<div class="fieldHolder">
+			<label for="txt3" aria-labelledby="extraInfo">Label with labelledby</label><br>
+			<input id="txt3" type="text">
+		</div>
+		<details>
+			<summary>Screen Readers Results</summary>
+			<dl>
+				<dt>JAWS</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>Label with labelledby edit. Type and text.</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Label with labelledby edit. Type and text.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>This is some kind of extra text... Type and text.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>NVDA</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>Label with labelledby edit auto-complete. Blank.</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Label with labelledby edit. Blank.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>This is some kind of extra text... Edit blank.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>iOS Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Safari, Firefox, and Chrome</dt>
+					<dd><q>Label with labelledy text field.  Double-tap to edit.</q></dd>
+					<dt>Opera Mini</dt>
+					<dd>Abosultely nothing</dd>
+				</dl>
+				</dd>
+				<dt>OS X Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>This is some kind of extra text..... text</q></p></dd>
+					<dt>Chrome</dt>
+					<dd><p><q>This is some kind of extra text..... Edit text.</q></p></dd>
+					<dt>Safari</dt>
+					<dd><p><q>Label with labelledby. Edit text.</q></p></dd>
+					<dt>Opera</dt>
+					<dd><p><q>This is some kind of extra text..... Edit text.</q></p></dd>
+				</dl>
+				</dd>
+			</dl>
+		</details>
+		<div class="fieldHolder">
+			<label for="txt4" aria-describedby="extraInfo">Label with describedby</label><br>
+			<input id="txt4" type="text">
+		</div>
+		<details open="">
+			<summary>Screen Readers Results</summary>
+			<dl>
+				<dt>JAWS</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>Label with describedby edit. Type and text.</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Label with describedby edit. Type and text.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>Label with describedby edit. Type and text.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>NVDA</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>Label with describedby edit auto-complete. Blank.</q></p></dd>
+					<dt>Internet Explorer 11</dt>
+					<dd><p><q>Label with describedby edit. Blank.</q></p></dd>
+					<dt>Opera 43</dt>
+					<dd><p><q>Label with describedby edit. Blank.</q></p></dd>
+				</dl>
+				</dd>
+				<dt>iOS Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Safari, Firefox, and Chrome</dt>
+					<dd><q>Label with describedby text field.  Double-tap to edit.</q></dd>
+					<dt>Opera Mini</dt>
+					<dd>Abosultely nothing</dd>
+				</dl>
+				</dd>
+				<dt>OS X Voice Over</dt>
+				<dd>
+				<dl>
+					<dt>Firefox</dt>
+					<dd><p><q>Label with describedby. text.</q></p></dd>
+					<dt>Chrome</dt>
+					<dd><p><q>Label with describedby. Edit text.</q></p></dd>
+					<dt>Safari</dt>
+					<dd><p><q>Label with describedby. Edit text.</q></p></dd>
+					<dt>Opera</dt>
+					<dd><p><q>Label with describedby. Edit text.</q></p></dd>
+				</dl>
+				</dd>
+			</dl>
+		</details>
+
+		</form>
+		<h2>Summary</h2>
+		<ul>
+			<li>JAWS only reads the <code>&lt;label&gt;</code>, <code>&lt;legend&gt;</code>, and <code>aria-describedby</code> when <code>&lt;fieldset&gt;</code> has <code>aria-describedby</code>, but not <code>aria-labelledby</code>, and then only in Firefox.</li>
+			<li>JAWS never reads the <code>aria-describedby</code> bit when <code>aria-describedby</code>/<code>aria-labelledby</code> are applied to the <code>&lt;legend&gt;</code> except in Opera.</li>
+			<li>NVDA never reads the <code>aria-describedby</code> bit when <code>aria-describedby</code>/<code>aria-labelledby</code> are applied to the <code>&lt;legend&gt;</code> or <code>&lt;fieldset&gt;</code> Except in Firefox and Opera when <code>aria-labelledby</code> are applied to the <code>&lt;fieldset&gt;</code>.</li>
+			<li>Applying <code>aria-labelledby</code> to an <code>&lt;input&gt;</code> prevents its <code>&lt;label&gt;</code> from being read, <em>except</em> on iOS VoiceOver.</li>
+			<li>Applying <code>aria-describedby</code> to the <code>&lt;input&gt;</code> works on everything except Opera + JAWS and Opera Mini + iOS VoiceOver.</li>
+			<li>Applying <code>aria-describedby</code> or <code>aria-labelledby</code> to the <code>&lt;label&gt;</code> never works (ie: it never reads both).</li>
+			<li>If using iOS and VoiceOver, it makes almost no difference if you use Safari, Chrome, or Firefox.</li>
+			<li>If using VoiceOver on OS X, Firefox reads a lot of stuff twice, and Safari leaves a lot out.</li>
+			<li>Adding <code>tabindex="-1"</code> to the Extra Text makes no appreciable difference.  (See <a href="labelledby-describedby-tabindex-1.html"><code>tabindex-"-1"</code> test results</a>.)</li>
+		</ul>
+		<h2>Conclusion</h2>
+		<p>Dos and don'ts:</p>
+		<ol>
+			<li><strong>Don't</strong> put <code>aria-describedby</code> or <code>aria-labelledby</code> in a <code>&lt;label&gt;</code>, <code>&lt;fieldset&gt;</code>, or <code>&lt;legend&gt;</code>.</li>
+			<li><strong>Do</strong> use <code>aria-describedby</code> in <code>&lt;input&gt;</code>s to supplement the <code>&lt;label&gt;</code>.</li>
+			<li><strong>Don't</strong> use Safari on OS X with VoiceOver. If using VoiceOver on OS X, Firefox gives a slight advantage, even if it reads stuff out twice sometimes.</li>
+			<li><strong>Don't</strong> use Opera Mini on iOS if you go blind or require a screen reader.</li>
+		</ol>
+
+
+
+        <div id="def-preFooter">
+        </div>
+        <!-- Write closure template -->
+        <script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                "dateModified": "2019-03-08"
+            });
+        </script>
+    </main>
+    
+    <div id="def-footer">
+    </div>
+    <!-- Write closure template -->
+    <script>
+        var defFooter = document.getElementById("def-footer");
+        defFooter.outerHTML = wet.builder.appFooter({
+            "showFeatures": false
+        });
+    </script>
+    <!-- Write closure template -->
+    <script>
+        document.write(wet.builder.refFooter({}));
+    </script>
+</body>
+
+</html>
