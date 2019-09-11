@@ -36,14 +36,9 @@
                 "text": "Web Standards Centre of Expertise (WS CoE)",
                 "href": "#"
             }],
-            "lngLinks": [{
-                "lang": "fr",
-                "href": "#",
-                "text": "Français"
-            }],
             "breadcrumbs": [{
                 "title" : "Home",
-                "href" : "index.html"
+                "href" : "../en/index.html"
             }]
         });
     </script>
@@ -51,31 +46,11 @@
 
 
         <h1>Best practices</h1>
+        <p>These examples are to open a discussion about different accessibility techniques can be used on commonly used patterns we see during our audits.</p>
 
         <section>
-            <h2>Hash tag link</h2>
-            <div class="row">
-                <section class="col-md-6">
-                    <h3>Normal link</h3>
-                    <p>Have you seen what people are saying about <a href="https://twitter.com/search?q=%23a11y">#a11y</a> on Twitter</p>
-            <pre><code>&lt;p&gt;Have you seen what people are saying about &lt;a href="https://twitter.com/search?q=%23a11y"&gt;#a11y&lt;/a&gt; on Twitter&lt;/p&gt;</code></pre>
-                </section>
-                <section class="col-md-6">
-                    <h3>Hidden text with <code>aria-hidden</code></h3>
-                    <p>Have you seen what people are saying about <a href="https://twitter.com/search?q=%23a11y"><span class="wb-inv">hash tag a 11 y</span><span aria-hidden="true">#a11y</span></a> on Twitter</p>
-                    <pre><code>&lt;p&gt;Have you seen what people are saying about &lt;a href="https://twitter.com/search?q=%23a11y"&gt;&lt;span class="wb-inv"&gt;hash tag a 11 y&lt;/span&gt;&lt;span aria-hidden="true"&gt;#a11y&lt;/span&gt;&lt;/a&gt; on Twitter&lt;/p&gt;</code></pre>
-                </section>
-                <section class="col-md-6">
-                    <h3>Hidden text with <code>role="presentation"</code></h3>
-                    <p>Have you seen what people are saying about <a href="https://twitter.com/search?q=%23a11y"><span class="wb-inv">hash tag a 11 y</span><span role="presentation">#a11y</span></a> on Twitter</p>
-                    <pre><code>&lt;p&gt;Have you seen what people are saying about &lt;a href="https://twitter.com/search?q=%23a11y"&gt;&lt;span class="wb-inv"&gt;hash tag a 11 y&lt;/span&gt;&lt;span role="presentation"&gt;#a11y&lt;/span&gt;&lt;/a&gt; on Twitter&lt;/p&gt;</code></pre>
-                </section>
-                <section class="col-md-6">
-                    <h3>Using <code>aria-label</code></h3>
-                    <p>Have you seen what people are saying about <a href="https://twitter.com/search?q=%23a11y"><span aria-label="hash tag a 11 y">#a11y</span></a> on Twitter</p>
-                    <pre><code>&lt;p&gt;Have you seen what people are saying about &lt;a href="https://twitter.com/search?q=%23a11y"&gt;&lt;span aria-label="hash tag a 11 y"&gt;#a11y&lt;/span&gt;&lt;/a&gt; on Twitter&lt;/p&gt;</code></pre>
-                </section>
-            </div>
+            <h2>List of best practices examples</h2>
+            <ul><li><a href="./hashtag.html">Using Twitter hash tags (#)</a></li></ul>
         </section>
 
 
